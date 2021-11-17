@@ -4,13 +4,11 @@ import * as bodyParser from 'body-parser';
 import Controller from './interface/controller.interface';
 import { WinstonLogger } from './config/WinstonLogger';
 import {
-    UserController,
     UserController
     } from './apicontroller';
 
 const PORT = 8000
 let apisController = [ 
-    new UserController(),
     new UserController()
     ]
 class App {

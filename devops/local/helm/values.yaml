@@ -54,14 +54,8 @@ service:
   systementry: 
     name: systementry
     type: NodePort
-    port: 8006
-    targetPort: 8006
-
-  systementry: 
-    name: systementry
-    type: NodePort
-    port: 8006
-    targetPort: 8006
+    port: 8008
+    targetPort: 8008
 
 
 deployment:
@@ -88,10 +82,6 @@ deployment:
   desktop:
      name: desktop
      image: geppettotest/gcam-desktop:1.0
-  systementry: 
-    name: systementry
-    image: geppettotest/gcam-systementry:1.0
-
   systementry: 
     name: systementry
     image: geppettotest/gcam-systementry:1.0

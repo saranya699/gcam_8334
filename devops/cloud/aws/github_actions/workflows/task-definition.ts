@@ -114,8 +114,7 @@ module.exports = {
             ],
             "environmentFiles": null,
             "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/gcam_8334?authSource=admin"},{"name":"CAMUNDAPOD_URL","value":"http://127.0.0.1:8080"},{"name":"SECURITYURL","value":"http://127.0.0.1:8003"},{"name":"AUTHPROXYURL","value":"http://127.0.0.1:8001"},{"name":"ADMINURL","value":"http://127.0.0.1:8004"},{"name":"CAMUNDAURL","value":"http://127.0.0.1:8002"},{"name":"APIGATEWAY","value":"http://127.0.0.1:8000"}
-            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8006"}
-            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8006"}
+            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8008"}
             ],
             "secrets": null,
             "mountPoints": [
@@ -328,53 +327,9 @@ module.exports = {
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": "8006",
+                    "containerPort": "8008",
                     "protocol": "tcp",
-                    "hostPort": "8006"
-                }
-            ],
-            "environmentFiles": null,
-            "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/gcam_8334?authSource=admin"}],
-            "secrets": null,
-            "mountPoints": [
-                {
-                  "readOnly": null,
-                  "containerPath": "/path/to/container",
-                  "sourceVolume": "gcam"
-                }
-              ],
-            "volumesFrom": null,
-            "hostname": null,
-            "user": null,
-            "workingDirectory": null,
-            "extraHosts": null,
-            "logConfiguration": {
-                "logDriver": "awslogs",
-                "options": {
-                    "awslogs-group": "/ecs/gcam",
-                    "awslogs-region": "us-east-1",
-                    "awslogs-stream-prefix": "ecs",
-                    "awslogs-create-group": "true"
-                }
-            },
-            "ulimits": null,
-            "dockerLabels": null,
-            "dependsOn": null,
-            "repositoryCredentials": {
-                "credentialsParameter": ""
-            }
-        },          
-        {
-            "name": "systementry-8334",
-            "image": `${process.env.AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/geppetto-generatedcode-gcam-8334-systementry:1`,
-            "memoryReservation": "300",
-            "resourceRequirements": null,
-            "essential": true,
-            "portMappings": [
-                {
-                    "containerPort": "8006",
-                    "protocol": "tcp",
-                    "hostPort": "8006"
+                    "hostPort": "8008"
                 }
             ],
             "environmentFiles": null,

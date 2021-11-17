@@ -93,7 +93,6 @@ services:
       - securitymanager
       - systemcredentialmanager
       - systementry
-      - systementry
 
 
 
@@ -102,17 +101,7 @@ services:
     image: systementry-8334
     container_name: systementry-8334
     ports: 
-      - 8006:8006
-    env_file: .env
-    depends_on:
-      - mongo
-
-  systementry: 
-    build: ../../../application/services/custom_services/systementry
-    image: systementry-8334
-    container_name: systementry-8334
-    ports: 
-      - 8006:8006
+      - 8008:8008
     env_file: .env
     depends_on:
       - mongo
